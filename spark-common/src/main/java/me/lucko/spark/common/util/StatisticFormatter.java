@@ -56,7 +56,7 @@ public enum StatisticFormatter {
     }
 
     public static TextComponent unFormattedTps(double tps) {
-        return text(tps);
+        return text((tps > 20.0 ? "*" : "") + Math.min(Math.round(tps * 100.0) / 100.0, 20.0));
     }
 
     public static TextComponent formatTickDurations(DoubleAverageInfo average) {
