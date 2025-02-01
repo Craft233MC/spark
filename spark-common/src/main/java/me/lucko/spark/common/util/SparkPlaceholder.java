@@ -60,6 +60,16 @@ public enum SparkPlaceholder {
                 return StatisticFormatter.formatTps(tickStatistics.tps5Min());
             case "15m":
                 return StatisticFormatter.formatTps(tickStatistics.tps15Min());
+            case "5s_no_color":
+                return StatisticFormatter.unFormattedTps(tickStatistics.tps5Sec());
+            case "10s_no_color":
+                return StatisticFormatter.unFormattedTps(tickStatistics.tps10Sec());
+            case "1m_no_color":
+                return StatisticFormatter.unFormattedTps(tickStatistics.tps1Min());
+            case "5m_no_color":
+                return StatisticFormatter.unFormattedTps(tickStatistics.tps5Min());
+            case "15m_no_color":
+                return StatisticFormatter.unFormattedTps(tickStatistics.tps15Min());
         }
 
         return null;
